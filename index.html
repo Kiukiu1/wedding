@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Thành Nam &amp; Thu Phương | Thiệp Mời Cưới</title>
+<meta name="description" content="Thiệp mời cưới online của Thành Nam &amp; Thu Phương">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+<!-- ================= ENVELOPE INTRO ================= -->
+<div class="envelope-overlay" id="envelopeOverlay">
+  <div class="envelope-scene">
+    <div class="envelope-stamp">Save&nbsp;the&nbsp;Date</div>
+    <div class="envelope-body">
+      <p class="envelope-eyebrow">Trân trọng kính mời</p>
+      <h1 class="envelope-names"><span>Thành Nam</span><em>&amp;</em><span>Thu Phương</span></h1>
+      <p class="envelope-date">19 . 07 . 2026</p>
+      <button class="btn btn--gold" id="openInvite" type="button">
+        <span>Mở Thiệp Mời</span>
+      </button>
+    </div>
+    <div class="envelope-flap" id="envelopeFlap" aria-hidden="true">
+      <span class="envelope-seal">NP</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SIDE DOT NAV ================= -->
+<nav class="dotnav" id="dotnav" aria-label="Điều hướng nhanh">
+  <a href="#hero" class="dotnav__item is-active" data-target="hero"><span>Trang chủ</span></a>
+  <a href="#couple" class="dotnav__item" data-target="couple"><span>Cô dâu &amp; Chú rể</span></a>
+  <a href="#story" class="dotnav__item" data-target="story"><span>Chuyện tình yêu</span></a>
+  <a href="#countdown" class="dotnav__item" data-target="countdown"><span>Đếm ngược</span></a>
+  <a href="#album" class="dotnav__item" data-target="album"><span>Album ảnh</span></a>
+  <a href="#events" class="dotnav__item" data-target="events"><span>Sự kiện</span></a>
+  <a href="#guestbook" class="dotnav__item" data-target="guestbook"><span>Sổ lưu bút</span></a>
+  <a href="#gift" class="dotnav__item" data-target="gift"><span>Mừng cưới</span></a>
+</nav>
+
+<!-- ================= MOBILE TOPBAR ================= -->
+<header class="topbar">
+  <span class="topbar__logo">N<em>&amp;</em>P</span>
+  <button class="topbar__toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobilemenu" id="mobileMenu">
+  <a href="#hero" data-target="hero">Trang chủ</a>
+  <a href="#couple" data-target="couple">Cô dâu &amp; Chú rể</a>
+  <a href="#story" data-target="story">Chuyện tình yêu</a>
+  <a href="#countdown" data-target="countdown">Đếm ngược</a>
+  <a href="#album" data-target="album">Album ảnh</a>
+  <a href="#events" data-target="events">Sự kiện</a>
+  <a href="#guestbook" data-target="guestbook">Sổ lưu bút</a>
+  <a href="#gift" data-target="gift">Mừng cưới</a>
+</div>
+
+<div class="site">
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <div class="sparkles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="hero__frame">
+      <p class="eyebrow" data-reveal="up">We Are Getting Married</p>
+      <div class="hero__monogram" data-reveal="zoom">
+        <svg class="laurel laurel--left" viewBox="0 0 60 140" aria-hidden="true"><use href="#laurel"/></svg>
+        <span class="hero__initials">N &amp; P</span>
+        <svg class="laurel laurel--right" viewBox="0 0 60 140" aria-hidden="true"><use href="#laurel"/></svg>
+      </div>
+      <h1 class="hero__names" data-reveal="up">Thành Nam <em>&amp;</em> Thu Phương</h1>
+      <p class="hero__script" data-reveal="up">save the date &amp; celebrate our forever</p>
+      <div class="divider" data-reveal="zoom"><span></span><i>❖</i><span></span></div>
+      <p class="hero__date" data-reveal="up">Chủ Nhật &middot; 19 Tháng 7, 2026</p>
+      <a href="#countdown" class="scrollcue" data-reveal="up" aria-label="Cuộn xuống">
+        <span></span>Kéo xuống
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= COUPLE ================= -->
+  <section id="couple" class="couple">
+    <p class="eyebrow" data-reveal>Nhân Vật Chính</p>
+    <h2 class="section-title" data-reveal>Cô Dâu &amp; Chú Rể</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+
+    <div class="couple__grid">
+      <article class="person" data-reveal="left">
+        <div class="person__photo" style="background-image:url('images/groom.jpg')" role="img" aria-label="Ảnh chú rể Thành Nam">
+          <span class="person__ring"></span>
+        </div>
+        <p class="person__role">Chú Rể</p>
+        <h3 class="person__name">Nguyễn Thành Nam</h3>
+        <p class="person__nickname">(Út Nam)</p>
+        <p class="person__desc">Con trai út của ông Nguyễn Văn Thanh &amp; bà Lê Thị Thu.</p>
+      </article>
+
+      <div class="couple__amp" data-reveal="zoom"><span>&amp;</span></div>
+
+      <article class="person" data-reveal="right">
+        <div class="person__photo" style="background-image:url('images/bride.jpg')" role="img" aria-label="Ảnh cô dâu Thu Phương">
+          <span class="person__ring"></span>
+        </div>
+        <p class="person__role">Cô Dâu</p>
+        <h3 class="person__name">Trần Thu Phương</h3>
+        <p class="person__nickname">(Trưởng Nữ)</p>
+        <p class="person__desc">Con gái đầu lòng của ông Trần Văn Thắng &amp; bà Trần Thị Sen.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= STORY / TIMELINE ================= -->
+  <section id="story" class="story">
+    <p class="eyebrow" data-reveal>Hành Trình</p>
+    <h2 class="section-title" data-reveal>Chuyện Chúng Mình</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+
+    <div class="timeline">
+      <div class="timeline__item" data-reveal="left">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <span class="timeline__date">Năm 2024</span>
+          <h3>Gặp Gỡ Và Trưởng Thành</h3>
+          <p>Qua những nồng nhiệt ban đầu, năm 2024 là lúc hai đứa học cách lắng nghe, dung hòa và trở thành chỗ dựa bình yên nhất cho đối phương.</p>
+        </div>
+      </div>
+      <div class="timeline__item" data-reveal="right">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <span class="timeline__date">Năm 2025</span>
+          <h3>Đồng Hành Và Vượt Thử Thách</h3>
+          <p>Qua nhiều áp lực từ cuộc sống, năm 2025 cũng là lúc tụi mình nhận ra: chỉ cần đồng lòng, không có khó khăn nào là không thể cùng nhau bước qua.</p>
+        </div>
+      </div>
+      <div class="timeline__item" data-reveal="zoom">
+        <div class="timeline__dot timeline__dot--gold"></div>
+        <div class="timeline__card timeline__card--gold">
+          <span class="timeline__date">19.07.2026</span>
+          <h3>Cột Mốc Gắn Kết</h3>
+          <p>Hôm nay, ngày hai trái tim chính thức hòa làm một. Cảm ơn vì đã cùng đi qua hành trình dài để hôm nay tụi mình chính thức viết tiếp chương hạnh phúc nhất đời.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COUNTDOWN ================= -->
+  <section id="countdown" class="countdown">
+    <div class="countdown__bg" aria-hidden="true"></div>
+    <div class="sparkles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="eyebrow eyebrow--light" data-reveal="up">The Big Day</p>
+    <h2 class="section-title section-title--light" data-reveal="up">Đếm Ngược Ngày Cưới</h2>
+    <div class="divider divider--light" data-reveal="zoom"><span></span><i>❖</i><span></span></div>
+
+    <div class="countdown__grid" data-reveal="zoom">
+      <div class="countdown__cell"><span class="countdown__num" id="cd-days">00</span><span class="countdown__label">Ngày</span></div>
+      <div class="countdown__cell"><span class="countdown__num" id="cd-hours">00</span><span class="countdown__label">Giờ</span></div>
+      <div class="countdown__cell"><span class="countdown__num" id="cd-mins">00</span><span class="countdown__label">Phút</span></div>
+      <div class="countdown__cell"><span class="countdown__num" id="cd-secs">00</span><span class="countdown__label">Giây</span></div>
+    </div>
+
+    <a href="#guestbook" class="btn btn--outline-light" data-reveal="up">Gửi Lời Chúc Mừng</a>
+  </section>
+
+  <!-- ================= ALBUM ================= -->
+  <section id="album" class="album">
+    <p class="eyebrow" data-reveal>Kỷ Niệm</p>
+    <h2 class="section-title" data-reveal>Album Hình Cưới</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+    <p class="album__hint" data-reveal>Một vài khoảnh khắc trong ngày chụp ảnh cưới của hai đứa.</p>
+
+    <div class="gallery" id="gallery">
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-01.jpg"><img src="images/gallery-01.jpg" alt="Ảnh cưới 01" loading="lazy"><span>01</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-02.jpg"><img src="images/gallery-02.jpg" alt="Ảnh cưới 02" loading="lazy"><span>02</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-03.jpg"><img src="images/gallery-03.jpg" alt="Ảnh cưới 03" loading="lazy"><span>03</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-04.jpg"><img src="images/gallery-04.jpg" alt="Ảnh cưới 04" loading="lazy"><span>04</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-05.jpg"><img src="images/gallery-05.jpg" alt="Ảnh cưới 05" loading="lazy"><span>05</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-06.jpg"><img src="images/gallery-06.jpg" alt="Ảnh cưới 06" loading="lazy"><span>06</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-07.jpg"><img src="images/gallery-07.jpg" alt="Ảnh cưới 07" loading="lazy"><span>07</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-08.jpg"><img src="images/gallery-08.jpg" alt="Ảnh cưới 08" loading="lazy"><span>08</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-09.jpg"><img src="images/gallery-09.jpg" alt="Ảnh cưới 09" loading="lazy"><span>09</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-10.jpg"><img src="images/gallery-10.jpg" alt="Ảnh cưới 10" loading="lazy"><span>10</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-11.jpg"><img src="images/gallery-11.jpg" alt="Ảnh cưới 11" loading="lazy"><span>11</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-12.jpg"><img src="images/gallery-12.jpg" alt="Ảnh cưới 12" loading="lazy"><span>12</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-13.jpg"><img src="images/gallery-13.jpg" alt="Ảnh cưới 13" loading="lazy"><span>13</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-14.jpg"><img src="images/gallery-14.jpg" alt="Ảnh cưới 14" loading="lazy"><span>14</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-15.jpg"><img src="images/gallery-15.jpg" alt="Ảnh cưới 15" loading="lazy"><span>15</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-16.jpg"><img src="images/gallery-16.jpg" alt="Ảnh cưới 16" loading="lazy"><span>16</span></button>
+      <button class="gallery__item" data-reveal="zoom" data-full="images/gallery-17.jpg"><img src="images/gallery-17.jpg" alt="Ảnh cưới 17" loading="lazy"><span>17</span></button>
+    </div>
+  </section>
+
+  <!-- ================= EVENTS ================= -->
+  <section id="events" class="events">
+    <p class="eyebrow" data-reveal>Chương Trình</p>
+    <h2 class="section-title" data-reveal>Sự Kiện Cưới</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+
+    <div class="events__list">
+      <article class="event" data-reveal="left"
+        data-title="Lễ Ăn Hỏi"
+        data-start="2026-07-18T15:00:00"
+        data-end="2026-07-18T16:30:00"
+        data-location="Thôn 1 Công Xá, Thị trấn Vĩnh Trụ, Lý Nhân, Hà Nam"
+        data-details="Lễ Ăn Hỏi của Thành Nam &amp; Thu Phương">
+        <div class="event__time">
+          <span class="event__hour">15:00</span>
+          <span class="event__ampm">Thứ Bảy, 18/07</span>
+        </div>
+        <div class="event__body">
+          <h3>Lễ Ăn Hỏi</h3>
+          <p class="event__addr">Thôn 1 Công Xá, TT. Vĩnh Trụ, Lý Nhân, Hà Nam</p>
+          <p class="event__lunar">Nhằm ngày 5/6 Âm Lịch</p>
+          <div class="event__actions">
+            <a class="link-btn map-btn" data-location="Thôn 1 Công Xá, Thị trấn Vĩnh Trụ, Lý Nhân, Hà Nam">Xem bản đồ</a>
+            <button class="link-btn cal-btn" type="button">+ Thêm lịch</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="event event--highlight" data-reveal="zoom"
+        data-title="Lễ Vu Quy"
+        data-start="2026-07-19T08:00:00"
+        data-end="2026-07-19T09:30:00"
+        data-location="Thôn 1 Công Xá, Thị trấn Vĩnh Trụ, Lý Nhân, Hà Nam"
+        data-details="Lễ Vu Quy của Thành Nam &amp; Thu Phương">
+        <div class="event__time">
+          <span class="event__hour">08:00</span>
+          <span class="event__ampm">Chủ Nhật, 19/07</span>
+        </div>
+        <div class="event__body">
+          <h3>Lễ Vu Quy</h3>
+          <p class="event__addr">Thôn 1 Công Xá, TT. Vĩnh Trụ, Lý Nhân, Hà Nam</p>
+          <p class="event__lunar">Nhằm ngày 6/6 Âm Lịch</p>
+          <div class="event__actions">
+            <a class="link-btn map-btn" data-location="Thôn 1 Công Xá, Thị trấn Vĩnh Trụ, Lý Nhân, Hà Nam">Xem bản đồ</a>
+            <button class="link-btn cal-btn" type="button">+ Thêm lịch</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= GUESTBOOK ================= -->
+  <section id="guestbook" class="guestbook">
+    <p class="eyebrow" data-reveal>Gửi Yêu Thương</p>
+    <h2 class="section-title" data-reveal>Sổ Lưu Bút</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+    <p class="guestbook__hint" data-reveal>Để lại lời chúc phúc cho đôi uyên ương — chọn nhanh một gợi ý hoặc viết những lời từ trái tim bạn.</p>
+
+    <div class="chip-list" id="chipList" data-reveal>
+      <button class="chip" type="button">Chúc hai bạn trăm năm hạnh phúc!</button>
+      <button class="chip" type="button">Chúc mừng đám cưới, mãi bên nhau nhé!</button>
+      <button class="chip" type="button">Chúc hai bạn đầu bạc răng long.</button>
+      <button class="chip" type="button">Trọn đời hạnh phúc bên nhau nha!</button>
+      <button class="chip" type="button">Chúc cặp đôi luôn yêu thương như hôm nay.</button>
+      <button class="chip" type="button">Sớm tin vui nhé hai bạn ơi!</button>
+    </div>
+
+    <form class="wishform" id="wishForm" data-reveal>
+      <input type="text" id="wishName" placeholder="Tên của bạn" required maxlength="60">
+      <textarea id="wishMessage" rows="3" placeholder="Lời chúc của bạn..." required maxlength="300"></textarea>
+      <button type="submit" class="btn btn--gold">Gửi Lời Chúc</button>
+    </form>
+
+    <div class="wishlist" id="wishList"></div>
+  </section>
+
+  <!-- ================= GIFT BOX ================= -->
+  <section id="gift" class="gift">
+    <p class="eyebrow" data-reveal>Một Chút Tấm Lòng</p>
+    <h2 class="section-title" data-reveal>Hộp Mừng Cưới</h2>
+    <div class="divider" data-reveal><span></span><i>❖</i><span></span></div>
+    <p class="gift__hint" data-reveal>Sự hiện diện của bạn là món quà quý giá nhất. Nếu muốn gửi chút lòng thành, đôi bạn xin trân trọng nhận qua:</p>
+
+    <div class="gift__grid">
+      <article class="giftcard" data-reveal="left">
+        <span class="giftcard__tag">Chú Rể</span>
+        <h3>Nguyễn Thành Nam</h3>
+        <p class="giftcard__bank">Vietcombank</p>
+        <p class="giftcard__number" data-copy="0071001234567">0071 0012 3456 7</p>
+        <button class="link-btn copy-btn" type="button" data-copy="0071001234567">Sao chép số tài khoản</button>
+      </article>
+      <article class="giftcard" data-reveal="right">
+        <span class="giftcard__tag">Cô Dâu</span>
+        <h3>Trần Thu Phương</h3>
+        <p class="giftcard__bank">Techcombank</p>
+        <p class="giftcard__number" data-copy="19036789123">1903 6789 123</p>
+        <button class="link-btn copy-btn" type="button" data-copy="19036789123">Sao chép số tài khoản</button>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__monogram">N &amp; P</p>
+  <p class="footer__thanks">Cảm ơn bạn đã dành thời gian ghé thăm trang thiệp cưới của chúng mình.<br>Rất mong được đón tiếp bạn trong ngày trọng đại!</p>
+  <p class="footer__hashtag">#ThanhNamThuPhuong2026</p>
+</footer>
+</div>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Đóng">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Ảnh trước">&#10094;</button>
+  <img class="lightbox__img" id="lightboxImg" alt="Ảnh cưới phóng to">
+  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Ảnh sau">&#10095;</button>
+</div>
+
+<!-- ================= MUSIC TOGGLE ================= -->
+<button class="music-toggle" id="musicToggle" aria-label="Bật/tắt nhạc nền">
+  <span class="music-disc"></span>
+</button>
+<audio id="bgm" loop preload="none">
+  <source src="audio/nhac-nen.mp3" type="audio/mpeg">
+</audio>
+
+<a class="toast" id="copyToast">Đã sao chép!</a>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="laurel" viewBox="0 0 60 140">
+      <path d="M30 138 C30 100 12 96 8 70 C4 44 16 20 30 4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M30 20 C22 20 14 15 10 8" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M30 40 C21 40 12 35 7 27" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M30 60 C20 60 10 55 5 47" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M30 80 C21 81 12 77 7 70" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M30 100 C22 101 15 98 11 92" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M30 120 C24 121 18 119 14 114" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="js/script.js"></script>
+</body>
+</html>

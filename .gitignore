@@ -1,0 +1,10 @@
+# Raw/original uploads not needed by the site (optimized copies live in images/*.jpg)
+images/ảnh abulm/
+images/drive-download-*/
+
+# Duplicate of the original audio file (site uses audio/nhac-nen.mp3)
+audio/Lễ Đường.mp3
+
+# OS junk
+Thumbs.db
+.DS_Store
