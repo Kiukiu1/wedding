@@ -18,25 +18,6 @@
   if (openBtn) openBtn.addEventListener('click', openInvitation);
 
   /* ---------------------------------------------------------------------
-     Mobile menu
-     --------------------------------------------------------------------- */
-  var menuToggle = document.getElementById('menuToggle');
-  var mobileMenu = document.getElementById('mobileMenu');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
-      var isOpen = mobileMenu.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open', isOpen);
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-    mobileMenu.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.classList.remove('is-open');
-      });
-    });
-  }
-
-  /* ---------------------------------------------------------------------
      Side dot nav — smooth scroll + active state
      --------------------------------------------------------------------- */
   var dotItems = document.querySelectorAll('.dotnav__item');
@@ -197,10 +178,12 @@
     currentIndex = (index + galleryItems.length) % galleryItems.length;
     lightboxImg.src = galleryItems[currentIndex].getAttribute('data-full');
     lightbox.classList.add('is-open');
+    document.body.classList.add('is-locked');
   }
   function hideLightbox() {
     lightbox.classList.remove('is-open');
     lightboxImg.src = '';
+    document.body.classList.remove('is-locked');
   }
   galleryItems.forEach(function (item, i) {
     item.addEventListener('click', function () { showLightbox(i); });
@@ -221,12 +204,8 @@
   });
 
   /* ---------------------------------------------------------------------
-     Events — map links + add to calendar
+     Events — map links
      --------------------------------------------------------------------- */
-  function toGCalStamp(date) {
-    return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-  }
-
   document.querySelectorAll('.map-btn').forEach(function (btn) {
     var location = btn.getAttribute('data-location');
     btn.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(location));
@@ -234,46 +213,11 @@
     btn.setAttribute('rel', 'noopener');
   });
 
-  document.querySelectorAll('.cal-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var event = btn.closest('.event');
-      var title = event.getAttribute('data-title');
-      var start = new Date(event.getAttribute('data-start'));
-      var end = new Date(event.getAttribute('data-end'));
-      var location = event.getAttribute('data-location');
-      var details = event.getAttribute('data-details') || title;
-
-      var ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'BEGIN:VEVENT',
-        'SUMMARY:' + title,
-        'DTSTART:' + toGCalStamp(start),
-        'DTEND:' + toGCalStamp(end),
-        'LOCATION:' + location,
-        'DESCRIPTION:' + details,
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-
-      var blob = new Blob([ics], { type: 'text/calendar' });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = title.replace(/\s+/g, '-') + '.ics';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
-    });
-  });
-
   /* ---------------------------------------------------------------------
      Guestbook
      --------------------------------------------------------------------- */
   var STORAGE_KEY = 'wedding_wishes_thanhnam_thuphuong';
   var wishForm = document.getElementById('wishForm');
-  var wishNameInput = document.getElementById('wishName');
   var wishMessageInput = document.getElementById('wishMessage');
   var wishList = document.getElementById('wishList');
   var chipList = document.getElementById('chipList');
@@ -299,7 +243,6 @@
     var wishes = loadWishes();
     wishList.innerHTML = wishes.map(function (w) {
       return '<div class="wish">' +
-        '<span class="wish__name">' + escapeHtml(w.name) + '</span>' +
         '<span class="wish__time">' + escapeHtml(w.time) + '</span>' +
         '<p class="wish__msg">' + escapeHtml(w.message) + '</p>' +
         '</div>';
@@ -319,12 +262,10 @@
   if (wishForm) {
     wishForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var name = wishNameInput.value.trim();
       var message = wishMessageInput.value.trim();
-      if (!name || !message) return;
+      if (!message) return;
       var wishes = loadWishes();
       wishes.unshift({
-        name: name,
         message: message,
         time: new Date().toLocaleDateString('vi-VN')
       });
@@ -335,7 +276,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Gift box — copy to clipboard
+     Toast helper
      --------------------------------------------------------------------- */
   var toast = document.getElementById('copyToast');
   var toastTimer;
@@ -347,18 +288,6 @@
       toast.classList.remove('is-visible');
     }, 1800);
   }
-  document.querySelectorAll('.copy-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var value = btn.getAttribute('data-copy');
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(value)
-          .then(function () { showToast('Đã sao chép số tài khoản!'); })
-          .catch(function () { showToast('Không thể sao chép, vui lòng thử lại.'); });
-      } else {
-        showToast('Trình duyệt không hỗ trợ sao chép tự động.');
-      }
-    });
-  });
 
   /* ---------------------------------------------------------------------
      Background music toggle
