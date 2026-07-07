@@ -14,6 +14,14 @@
     setTimeout(function () {
       overlay.classList.add('is-hidden');
     }, 550);
+
+    var bgm = document.getElementById('bgm');
+    var musicToggle = document.getElementById('musicToggle');
+    if (bgm && bgm.paused) {
+      bgm.play().then(function () {
+        if (musicToggle) musicToggle.classList.add('is-playing');
+      }).catch(function () { /* autoplay blocked, user can still press the music toggle */ });
+    }
   }
   if (openBtn) openBtn.addEventListener('click', openInvitation);
 
@@ -207,8 +215,12 @@
      Events — map links
      --------------------------------------------------------------------- */
   document.querySelectorAll('.map-btn').forEach(function (btn) {
-    var location = btn.getAttribute('data-location');
-    btn.setAttribute('href', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(location));
+    var mapUrl = btn.getAttribute('data-map-url');
+    if (!mapUrl) {
+      var location = btn.getAttribute('data-location');
+      mapUrl = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(location);
+    }
+    btn.setAttribute('href', mapUrl);
     btn.setAttribute('target', '_blank');
     btn.setAttribute('rel', 'noopener');
   });

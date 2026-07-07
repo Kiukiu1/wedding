@@ -327,7 +327,9 @@ section{ padding:6.5rem 6vw; position:relative; }
 .person__desc{ font-size:.92rem; }
 @media (max-width:640px){
   .couple__grid{ grid-template-columns:1fr; }
+  .couple__grid .person:first-of-type{ order:1; }
   .couple__amp{ order:2; }
+  .couple__grid .person:last-of-type{ order:3; }
 }
 
 /* ==========================================================================
